@@ -1,0 +1,47 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+            System.out.println("*****Income Tax Calculator*****");
+            System.out.print("Enter your total Income here (Dollars) : ");
+            Scanner input = new Scanner(System.in);
+            double income = input.nextDouble();
+            if (income<0){
+                System.out.println("Wrong Amount");
+            }
+            if (income >= 0 && income <= 18200) {
+                System.out.println("You dont need to pay Tax");
+            }
+
+            if (income > 18200 && income <= 37000) {
+                double taxable1 = income - 18200;
+                double tax1 = taxable1 * 0.19;
+                System.out.println("Your must pay " + tax1 + " dollars of tax.");
+            }
+
+            if (income > 37000 && income <= 80000) {
+                double taxable2 = income - 37000;
+                double tax2 = (taxable2 * 0.325) + 3572;
+                System.out.println("Your must pay " + tax2 + " dollars of tax.");
+            }
+
+            if (income > 80000 && income <= 180000) {
+                double taxable3 = income - 80000;
+                double tax3 = (taxable3 * 0.37) + 17547;
+                System.out.println("Your must pay " + tax3 + " dollars of tax.");
+            }
+
+            if (income > 180000) {
+                double taxable4 = income - 180000;
+                double tax4 = (taxable4 * 0.45) + 54547;
+                System.out.println("Your must pay " + tax4 + " dollars of tax.");
+            }
+
+
+        }
+    }
+
