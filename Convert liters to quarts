@@ -1,0 +1,18 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        System.out.println("litres to quarts");
+        System.out.println("Enter your volume in litres : ");
+        Scanner litres=new Scanner(System.in);
+        int input=litres.nextInt();
+        double quarts=input*0.878;
+        System.out.print("Your Volume in quarts = ");
+        System.out.print(quarts);
+        System.out.print(" quarts");
+    }
+}
